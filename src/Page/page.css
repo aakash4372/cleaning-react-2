@@ -1,6 +1,6 @@
 .review-section  .service-card {
     perspective: 1000px;
-    background-color: #BFBBA9;
+    background-color: #dbd2d2 !important;
   }
   
   .flip-card-inner {

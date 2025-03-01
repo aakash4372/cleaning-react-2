@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import './aad.css';
+import './page.css';
 import AOS from "aos";
 import "aos/dist/aos.css";
 
