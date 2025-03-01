@@ -16,8 +16,15 @@ import { FaSearchLocation } from "react-icons/fa";
 
 export default function Carousel() {
   useEffect(() => {
-    AOS.init();
-  });
+    AOS.init({
+      duration: 1500, // Animation duration
+      once: true, // Ensures animation happens only once
+      easing: "ease-in-out", // Smooth animation
+    });
+    AOS.refresh(); // Refresh AOS after initialization
+  }, []);
+  
+  
   const services = [
     {
       title: "EXPERT CLEANING FOR EVERY SPACE",
