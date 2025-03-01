@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Navbar, Nav, Offcanvas, Container } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 import { FiMenu } from "react-icons/fi";
+import { FaHome, FaInfoCircle,FaBriefcase, FaPhone } from "react-icons/fa";
+import { MdCleanHands } from "react-icons/md";
+import { HiOutlineBars3BottomRight } from "react-icons/hi2";
 
 const MyOffcanvas = () => {
   const [show, setShow] = useState(false);
@@ -58,7 +61,7 @@ const MyOffcanvas = () => {
           </Nav>
 
           {/* Offcanvas Toggle Button for Mobile */}
-          <FiMenu size={28} className="d-lg-none" onClick={handleShow} style={{ cursor: "pointer" }} />
+          <HiOutlineBars3BottomRight size={30} color="#227ec1" className="d-lg-none" onClick={handleShow} style={{ cursor: "pointer" }} />
         </Container>
       </Navbar>
 
@@ -69,11 +72,21 @@ const MyOffcanvas = () => {
         </Offcanvas.Header>
         <Offcanvas.Body>
           <Nav className="flex-column">
-            <NavLink to="/" className={({ isActive }) => `nav-link my-2 ${isActive ? "active-link" : ""}`} onClick={handleClose}>Home</NavLink>
-            <NavLink to="/about" className={({ isActive }) => `nav-link my-2 ${isActive ? "active-link" : ""}`} onClick={handleClose}>About</NavLink>
-            <NavLink to="/services" className={({ isActive }) => `nav-link my-2 ${isActive ? "active-link" : ""}`} onClick={handleClose}>Services</NavLink>
-            <NavLink to="/our-work" className={({ isActive }) => `nav-link my-2 ${isActive ? "active-link" : ""}`} onClick={handleClose}>Our Work</NavLink>
-            <NavLink to="/contact" className={({ isActive }) => `nav-link my-2 ${isActive ? "active-link" : ""}`} onClick={handleClose}>Contact</NavLink>
+            <NavLink to="/" className={({ isActive }) => `nav-link my-2 d-flex align-items-center ${isActive ? "active-link" : ""}`} onClick={handleClose}>
+              <FaHome className="me-2" /> Home
+            </NavLink>
+            <NavLink to="/about" className={({ isActive }) => `nav-link my-2 d-flex align-items-center ${isActive ? "active-link" : ""}`} onClick={handleClose}>
+              <FaInfoCircle className="me-2" /> About
+            </NavLink>
+            <NavLink to="/services" className={({ isActive }) => `nav-link my-2 d-flex align-items-center ${isActive ? "active-link" : ""}`} onClick={handleClose}>
+              <MdCleanHands className="me-2" /> Services
+            </NavLink>
+            <NavLink to="/our-work" className={({ isActive }) => `nav-link my-2 d-flex align-items-center ${isActive ? "active-link" : ""}`} onClick={handleClose}>
+              <FaBriefcase className="me-2" /> Our Work
+            </NavLink>
+            <NavLink to="/contact" className={({ isActive }) => `nav-link my-2 d-flex align-items-center ${isActive ? "active-link" : ""}`} onClick={handleClose}>
+              <FaPhone className="me-2" /> Contact
+            </NavLink>
           </Nav>
         </Offcanvas.Body>
       </Offcanvas>

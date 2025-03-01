@@ -53,92 +53,90 @@ export default function Carousel() {
     <div>
       <ScrollToTop />
       <div
-        id="mainCarousel"
-        class="carousel slide"
-        data-bs-ride="carousel"
-        data-bs-pause="false"
-      >
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              src={`${process.env.PUBLIC_URL}/img/medium-shot-people-cleaning-building.jpg`}
-              class="d-block w-100"
-              alt="..."
-            />
-            <div class="carousel-caption">
-              <h2>Welcome to Chinna Cleaning Facility</h2>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img
-              src={`${process.env.PUBLIC_URL}/img/medium-shot-woman-cleaning-home.jpg`}
-              class="d-block w-100"
-              alt="..."
-            />
-            <div class="carousel-caption">
-              <h2>Welcome to Chinna Cleaning Facility</h2>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img
-              src={`${process.env.PUBLIC_URL}/img/person-taking-care-office-cleaning (1).jpg`}
-              class="d-block w-100"
-              alt="..."
-            />
-            <div class="carousel-caption">
-              <h2>Welcome to Chinna Cleaning Facility</h2>
-            </div>
-          </div>
-        </div>
+  id="mainCarousel"
+  className="carousel slide"
+  data-bs-ride="carousel"
+  data-bs-interval="3000"
+  data-bs-pause="false"
+  data-bs-touch="true" // Ensures swipe gestures work on mobile
+>
+  <div className="carousel-inner">
+    <div className="carousel-item active">
+      <img
+        src={`${process.env.PUBLIC_URL}/img/medium-shot-people-cleaning-building.jpg`}
+        className="d-block w-100"
+        alt="..."
+      />
+      <div className="carousel-caption">
+        <h2>Welcome to Chinna Cleaning Facility</h2>
       </div>
+    </div>
+    <div className="carousel-item">
+      <img
+        src={`${process.env.PUBLIC_URL}/img/medium-shot-woman-cleaning-home.jpg`}
+        className="d-block w-100"
+        alt="..."
+      />
+      <div className="carousel-caption">
+        <h2>Welcome to Chinna Cleaning Facility</h2>
+      </div>
+    </div>
+    <div className="carousel-item">
+      <img
+        src={`${process.env.PUBLIC_URL}/img/person-taking-care-office-cleaning (1).jpg`}
+        className="d-block w-100"
+        alt="..."
+      />
+      <div className="carousel-caption">
+        <h2>Welcome to Chinna Cleaning Facility</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
 
       <div>
-        <div
-          className="who-we-are mt-0"
-          style={{
-            background:
-              "linear-gradient(to bottom, #E8F9FF,rgb(205, 231, 240),#E8F9FF, white)",
-          }}
-        >
-          <h2
-            class="text-center heading"
-            data-aos="zoom-in"
-            data-aos-duration="1050"
-          >
-            <span class="line"></span> Who We Are<span class="line"></span>
-          </h2>
+      <div
+        className="who-we-are mt-0"
+        style={{
+          background:
+            "linear-gradient(to bottom, #E8F9FF,rgb(205, 231, 240),#E8F9FF, white)",
+        }}
+      >
+        <h2 className="text-center heading" data-aos="zoom-in" data-aos-duration="1050">
+          <span className="line"></span> Who We Are <span className="line"></span>
+        </h2>
 
-          <div class="container my-5">
-            <div
-              class="row align-items-center"
-              data-aos="fade-left"
-              data-aos-duration="1050"
-            >
-              <div class="col-12 col-md-6 col-lg-6">
+        <div className="container my-5">
+          <div className="row align-items-center" data-aos="fade-left" data-aos-duration="1050">
+            <div className="col-12 col-md-6 col-lg-6">
+              {/* Image Wrapper for Zoom Effect */}
+              <div className="image-container">
                 <img
-                  src={`${process.env.PUBLIC_URL}/img/girl.jpg`}
-                  alt="cleaing-pic"
-                  class="img-fluid rounded who-we-are-img"
+                  src={`${process.env.PUBLIC_URL}/img/man.avif`}
+                  alt="cleaning-pic"
+                  className="img-fluid rounded who-we-are-img"
                 />
               </div>
+            </div>
 
-              <div className="col-12 col-md-6 col-lg-6">
-                <h2 className="fw-bold">Welcome to Chinna Cleaning Facility</h2>
-                <p className="pt-2">
-                  Chinna Cleaning Facility offers exceptional cleaning services
-                  for residential, office, and commercial spaces. Our
-                  professional team utilizes high-quality products and advanced
-                  techniques to create a clean and hygienic environment. With 11
-                  years of experience in Coimbatore, we are{" "}
-                  <Link to="/about" className=" d-inline">
-                    more...
-                  </Link>
-                </p>
-              </div>
+            <div className="col-12 col-md-6 col-lg-6">
+              <h2 className="fw-bold">Welcome to Chinna Cleaning Facility</h2>
+              <p className="pt-2">
+                Chinna Cleaning Facility offers exceptional cleaning services for
+                residential, office, and commercial spaces. Our professional team
+                utilizes high-quality products and advanced techniques to create
+                a clean and hygienic environment. With 11 years of experience in
+                Coimbatore, we are{" "}
+                <Link to="/about" className="d-inline">
+                  more...
+                </Link>
+              </p>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
       <div className="who-we-serve-section py-2 mb-3" id="WhoWeServe">
         <h2
@@ -156,7 +154,7 @@ export default function Carousel() {
                 <h5 className="service-title text-uppercase mb-3">
                   {service.title}
                 </h5>
-                <p className="service-content">{service.content}</p>
+                <p className="service-content" style={{ textAlign: 'center' }}>{service.content}</p>
               </Card>
             </div>
           ))}
