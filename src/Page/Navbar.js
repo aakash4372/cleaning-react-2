@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, Nav, Offcanvas, Container } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
-import { FiMenu } from "react-icons/fi";
 import { FaHome, FaInfoCircle,FaBriefcase, FaPhone } from "react-icons/fa";
 import { MdCleanHands } from "react-icons/md";
 import { HiOutlineBars3BottomRight } from "react-icons/hi2";
