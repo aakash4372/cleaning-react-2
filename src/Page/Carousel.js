@@ -53,103 +53,103 @@ export default function Carousel() {
     <div>
       <ScrollToTop />
       <div
-  id="mainCarousel"
-  className="carousel slide"
-  data-bs-ride="carousel"
-  data-bs-interval="3000"
-  data-bs-pause="false"
-  data-bs-touch="true" // Ensures swipe gestures work on mobile
->
-  <div className="carousel-inner">
-    <div className="carousel-item active">
-      <img
-        src={`${process.env.PUBLIC_URL}/img/medium-shot-people-cleaning-building.jpg`}
-        className="d-block w-100"
-        alt="..."
-      />
-      <div className="carousel-caption">
-        <h2>Welcome to Chinna Cleaning Facility</h2>
-      </div>
-    </div>
-    <div className="carousel-item">
-      <img
-        src={`${process.env.PUBLIC_URL}/img/medium-shot-woman-cleaning-home.jpg`}
-        className="d-block w-100"
-        alt="..."
-      />
-      <div className="carousel-caption">
-        <h2>Welcome to Chinna Cleaning Facility</h2>
-      </div>
-    </div>
-    <div className="carousel-item">
-      <img
-        src={`${process.env.PUBLIC_URL}/img/person-taking-care-office-cleaning (1).jpg`}
-        className="d-block w-100"
-        alt="..."
-      />
-      <div className="carousel-caption">
-        <h2>Welcome to Chinna Cleaning Facility</h2>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-      <div>
-      <div
-        className="who-we-are mt-0"
-        style={{
-          background:
-            "linear-gradient(to bottom, #E8F9FF,rgb(205, 231, 240),#E8F9FF, white)",
-        }}
+        id="mainCarousel"
+        className="carousel slide"
+        data-bs-ride="carousel"
+        data-bs-interval="3000"
+        data-bs-pause="false"
+        data-bs-touch="true" // Ensures swipe gestures work on mobile
       >
-        <h2 className="text-center heading" data-aos="zoom-in" data-aos-duration="1050">
-          <span className="line"></span> Who We Are <span className="line"></span>
-        </h2>
-
-        <div className="container my-5">
-          <div className="row align-items-center" data-aos="fade-left" data-aos-duration="1050">
-            <div className="col-12 col-md-6 col-lg-6">
-              {/* Image Wrapper for Zoom Effect */}
-              <div className="image-container">
-                <img
-                  src={`${process.env.PUBLIC_URL}/img/man.avif`}
-                  alt="cleaning-pic"
-                  className="img-fluid rounded who-we-are-img"
-                />
-              </div>
+        <div className="carousel-inner">
+          <div className="carousel-item active">
+            <img
+              src={`${process.env.PUBLIC_URL}/img/medium-shot-people-cleaning-building.jpg`}
+              className="d-block w-100"
+              alt="..."
+            />
+            <div className="carousel-caption">
+              <h2>Welcome to Chinna Cleaning Facility</h2>
             </div>
-
-            <div className="col-12 col-md-6 col-lg-6">
-              <h2 className="fw-bold">Welcome to Chinna Cleaning Facility</h2>
-              <p className="pt-2">
-                Chinna Cleaning Facility offers exceptional cleaning services for
-                residential, office, and commercial spaces. Our professional team
-                utilizes high-quality products and advanced techniques to create
-                a clean and hygienic environment. With 11 years of experience in
-                Coimbatore, we are{" "}
-                <Link to="/about" className="d-inline">
-                  more...
-                </Link>
-              </p>
+          </div>
+          <div className="carousel-item">
+            <img
+              src={`${process.env.PUBLIC_URL}/img/medium-shot-woman-cleaning-home.jpg`}
+              className="d-block w-100"
+              alt="..."
+            />
+            <div className="carousel-caption">
+              <h2>Welcome to Chinna Cleaning Facility</h2>
+            </div>
+          </div>
+          <div className="carousel-item">
+            <img
+              src={`${process.env.PUBLIC_URL}/img/person-taking-care-office-cleaning (1).jpg`}
+              className="d-block w-100"
+              alt="..."
+            />
+            <div className="carousel-caption">
+              <h2>Welcome to Chinna Cleaning Facility</h2>
             </div>
           </div>
         </div>
       </div>
-    </div>
+
+
+      <div>
+        <div
+          className="who-we-are mt-0"
+          style={{
+            background:
+              "linear-gradient(to bottom, #E8F9FF,rgb(205, 231, 240),#E8F9FF, white)",
+          }}
+        >
+          <h2 className="text-center heading" data-aos="zoom-in" data-aos-duration="1500">
+            <span className="line"></span> Who We Are <span className="line"></span>
+          </h2>
+
+          <div className="container my-5">
+            <div className="row align-items-center" data-aos="fade-left" data-aos-duration="1500">
+              <div className="col-12 col-md-6 col-lg-6">
+                {/* Image Wrapper for Zoom Effect */}
+                <div className="image-container">
+                  <img
+                    src={`${process.env.PUBLIC_URL}/img/man.avif`}
+                    alt="cleaning-pic"
+                    className="img-fluid rounded who-we-are-img"
+                  />
+                </div>
+              </div>
+
+              <div className="col-12 col-md-6 col-lg-6">
+                <h2 className="fw-bold">Welcome to Chinna Cleaning Facility</h2>
+                <p className="pt-2">
+                  Chinna Cleaning Facility offers exceptional cleaning services for
+                  residential, office, and commercial spaces. Our professional team
+                  utilizes high-quality products and advanced techniques to create
+                  a clean and hygienic environment. With 11 years of experience in
+                  Coimbatore, we are{" "}
+                  <Link to="/about" className="d-inline">
+                    more...
+                  </Link>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div className="who-we-serve-section py-2 mb-3" id="WhoWeServe">
         <h2
           className="text-center heading mb-5"
           data-aos="zoom-in"
-          data-aos-duration="1050"
+          data-aos-duration="1500"
         >
           <span className="line"></span> Service<span className="line"></span>
         </h2>
 
         <Slider {...settings} className="services  container">
           {services.map((service, index) => (
-            <div key={index} className="p-3" data-aos="zoom-in">
+            <div key={index} className="p-3" data-aos="zoom-in"  data-aos-duration="1500">
               <Card className="service-card service-card-details text-center pt-4">
                 <h5 className="service-title text-uppercase mb-3">
                   {service.title}

@@ -48,13 +48,13 @@ const ReviewSlider = () => {
           });
     return (
         <div className="review-section py-5" id="WhoWeServe" style={{ background: "linear-gradient(to top, #cde7f0, #cde7f0, #E8F9FF, white)" }}>
-            <h2 className="text-center heading mb-5" data-aos="zoom-in" data-aos-duration="1050">
+            <h2 className="text-center heading mb-5" data-aos="zoom-in" data-aos-duration="1500">
                 <span className="line"></span> Reviews<span className="line"></span>
             </h2>
 
             <Slider {...settings} className="services container" >
                 {services.map((service, index) => (
-                    <div key={index} className="p-3" data-aos="fade-left" data-aos-duration="1050">
+                    <div key={index} className="p-3" data-aos="fade-left" data-aos-duration="1500">
                         <Card className="service-card text-center pt-4 flip-card">
                             <div className="flip-card-inner">
                                 <div className="flip-card-front">
