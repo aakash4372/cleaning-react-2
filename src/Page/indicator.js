@@ -72,7 +72,7 @@ const ScrollToTop = () => {
                 cy="30"
                 r="26"
                 fill="none"
-                stroke="#d98324"
+                stroke="#0cb4d9"
                 strokeWidth="3"
                 strokeDasharray="163.36" // Full circumference (2 * π * r)
                 strokeDashoffset={`${163.36 - (scrollPercentage / 100) * 163.36}`}
